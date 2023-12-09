@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 
 interface Props {
 	children: ReactNode
 }
 
-export const GreyLayout = ({children}: Props) => {
+export const GreyLayout: FC<Props> = ({ children }) => {
   return (
 		<div
 			style={{

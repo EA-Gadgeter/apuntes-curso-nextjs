@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import { CSSProperties, FC } from "react";
 
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -13,7 +13,7 @@ const style: CSSProperties = {
 	textDecoration: "underline",
 };
 
-export const ActiveLink = ({ text, href }: Props) => {
+export const ActiveLink: FC<Props> = ({ text, href }) => {
 	const { asPath } = useRouter();
 	return (
 		<Link href={href} style={asPath === href ? style : undefined}>

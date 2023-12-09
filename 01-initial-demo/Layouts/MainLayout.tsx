@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, FC } from "react";
 
 import Head from "next/head";
 import { Inter } from "next/font/google";
@@ -13,7 +13,7 @@ interface Props {
 	children: ReactNode
 }
 
-export const MainLayout = ({ children }: Props) => {
+export const MainLayout: FC<Props> = ({ children }) => {
 	return (
 		<>
 			<Head>
